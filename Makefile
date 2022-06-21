@@ -1,6 +1,6 @@
 # 设置变量: export声明环境变量,使子目录Makefile可以使用该变量
 CC = g++
-WORKDIR = .
+export WORKDIR = $(shell pwd)
 SUBDIRS = $(shell find $(WORKDIR) -maxdepth 5 -type d | grep 'chapter[0~9]')
 export CFLAGS = -Wall -Wextra -Werror -g
 export LIBFLAGS = -lstdc++
@@ -29,5 +29,5 @@ clean:
 			make -C $$dir clean; \
 		fi \
 	done
-	
+	@rm $(WORKDIR)/bin/* -rf
 	@echo "make clean end"

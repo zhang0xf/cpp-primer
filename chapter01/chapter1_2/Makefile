@@ -13,6 +13,11 @@ all:
 	$(foreach src, $(NODIR_SRCS),\
 		$(CC) $(src) $(CFLAGS) $(LIBFLAGS) -o $(basename $(src)); \
 	)
+	@mv $(TARGETS) $(WORKDIR)/bin
 
 clean:
-	rm $(TARGETS)
+	@for target in $(TARGETS); do \
+		if [ -e $$target ]; then \
+			rm $$target -rf; \
+		fi \
+	done
