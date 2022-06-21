@@ -6,6 +6,7 @@ C++ primer
 * `sudo apt-get install gcc`
 * `sudo apt-get install g++`
 * `sudo apt-get install make`
+* [WSL](https://github.com/zhang0xf/md/blob/main/WSL/WSL.md)
 
 # build
 
