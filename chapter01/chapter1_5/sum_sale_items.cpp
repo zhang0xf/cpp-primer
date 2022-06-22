@@ -1,5 +1,5 @@
 #include <iostream>
-#include "sale_items.h"
+#include "../sale_items.h"
 
 // input :
 // 0-201-70353-X 4 24.99
