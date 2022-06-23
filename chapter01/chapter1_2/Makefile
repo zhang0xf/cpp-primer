@@ -10,12 +10,11 @@ MOVE_FILES =
 # 已经生成的项目不再编译
 # ifeq:用于控制make在Makefile看到的内容,不能用于make执行时！
 # $()用法:1.函数调用(包含自定义函数);2.shell调用;3.取变量值.
-# wildcard函数,测试文件是否存在
-# eval函数修改变量值
-# if函数: $(if <condition>,<then-part>,<else-part>). condition为非空字符串则返回真！
-# 另见chapter1_3:Makefile
-# $(shell [ condition ] && text)整个作为if的condition
-# 存在问题:mv文件时,编译尚未完成!!!
+# wildcard:可以用于测试文件是否存在!
+# eval:修改变量值
+# if: $(if <condition>,<then-part>,<else-part>). condition为非空字符串则返回真！
+# 将$(shell [ condition ] && text)整个作为if函数的condition
+# 存在问题:mv文件时,编译尚未完成!解决方法:make move!(是否有更好的解决方案?)
 all:
 	@#echo $(FILE_EXISTS)
 	$(foreach t, $(TARGETS), \
