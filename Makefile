@@ -6,7 +6,7 @@ export CFLAGS = -Wall -Wextra -Werror -g
 export LIBFLAGS = -lstdc++
 
 #.PHONY指定伪目标,Makefile默认目标是一个文件
-.PHONY:all clean
+.PHONY:all move clean
 
 all:
 	@echo "make start"

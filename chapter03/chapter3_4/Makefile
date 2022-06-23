@@ -7,13 +7,11 @@ FILE_EXISTS = 1
 .PHONY:all clean
 
 all:
-	@#echo $(FILE_EXISTS)
 	$(foreach t, $(TARGETS), \
 		$(if $(wildcard $(WORKDIR)/bin/$t), \
 		$(eval FILE_EXISTS=1), \
 		$(if $(wildcard ./$t), $(eval FILE_EXISTS=1), $(eval FILE_EXISTS=0))) )
 
-	@#echo $(FILE_EXISTS)
 	$(if $(shell [ $(FILE_EXISTS) -eq 0 ] && echo true), $(foreach c, $(NODIR_SRCS), $(CC) $c $(CFLAGS) $(LIBFLAGS) -o $(basename $c);) )
 
 move:
