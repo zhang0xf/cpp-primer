@@ -11,11 +11,6 @@ export LIBFLAGS = -lstdc++
 all:
 	@echo "make start"
 
-	@# 注释:创建bin目录
-	@if [ ! -d $(WORKDIR)/bin ]; then \
-		mkdir bin; \
-	fi
-
 	@# 注释:如果目录中存在Makefile文件,才执行make -C
 	@for dir in $(SUBDIRS); do \
 		if [ -e $$dir/Makefile ]; then \
@@ -24,6 +19,23 @@ all:
 	done
 	
 	@echo "make end"
+
+move:
+	@echo "make move start"
+
+	@# 注释:创建bin目录
+	@if [ ! -d $(WORKDIR)/bin ]; then \
+		mkdir bin; \
+	fi
+
+	@# 注释:如果目录中存在Makefile文件,才执行make -C
+	@for dir in $(SUBDIRS); do \
+		if [ -e $$dir/Makefile ]; then \
+			make -C $$dir move; \
+		fi \
+	done
+
+	@echo "make move end"
 
 clean:
 	@echo "make clean start"

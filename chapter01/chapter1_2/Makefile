@@ -3,10 +3,11 @@ SRCS = $(wildcard *.cpp)
 NODIR_SRCS = $(notdir $(SRCS))
 TARGETS = $(basename $(NODIR_SRCS))
 FILE_EXISTS = 1
+MOVE_FILES =
 
 .PHONY:all clean
 
-# 检查是否有未生成的文件,如果有,重新生成
+# 已经生成的项目不再编译
 # ifeq:用于控制make在Makefile看到的内容,不能用于make执行时！
 # $()用法:1.函数调用(包含自定义函数);2.shell调用;3.取变量值.
 # wildcard函数,测试文件是否存在
@@ -23,12 +24,15 @@ all:
 		$(if $(wildcard ./$t), $(eval FILE_EXISTS=1), $(eval FILE_EXISTS=0))) )
 
 	@#echo $(FILE_EXISTS)
-	$(if $(shell [ $(FILE_EXISTS) -eq 0 ] && echo true), $(foreach c, $(NODIR_SRCS), $(CC) $c $(CFLAGS) $(LIBFLAGS) -o $(basename $c)) )
+	$(if $(shell [ $(FILE_EXISTS) -eq 0 ] && echo true), $(foreach c, $(NODIR_SRCS), $(CC) $c $(CFLAGS) $(LIBFLAGS) -o $(basename $c);) )
 
+move:
 	$(foreach t, $(TARGETS), \
-		$(if $(wildcard $(shell pwd)/$t), @mv $t $(WORKDIR)/bin) )
+		$(if $(wildcard $(shell pwd)/$t), $(eval MOVE_FILES+=$t)) )
 
+	$(shell mv $(MOVE_FILES) $(WORKDIR)/bin)
 
+# 另一种风格for,缺点:在for中不能使用函数.
 clean:
 	@for target in $(TARGETS); do \
 		if [ -e $$target ]; then \
