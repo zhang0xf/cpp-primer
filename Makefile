@@ -5,13 +5,13 @@ SUBDIRS = $(shell find $(WORKDIR) -maxdepth 5 -type d | grep 'chapter[0~9]')
 export CFLAGS = -Wall -Wextra -Werror -g
 export LIBFLAGS = -lstdc++
 
-#.PHONY指定伪目标,Makefile默认目标是文件
+#.PHONY指定伪目标,Makefile默认目标是一个文件
 .PHONY:all clean
 
 all:
 	@echo "make start"
 
-	@# 创建bin目录
+	@# 注释:创建bin目录
 	@if [ ! -d $(WORKDIR)/bin ]; then \
 		mkdir bin; \
 	fi
@@ -34,5 +34,7 @@ clean:
 			make -C $$dir clean; \
 		fi \
 	done
+	
 	@rm $(WORKDIR)/bin/* -rf
+	
 	@echo "make clean end"
