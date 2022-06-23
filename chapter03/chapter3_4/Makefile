@@ -4,8 +4,6 @@ NODIR_SRCS = $(notdir $(SRCS))
 TARGETS = $(basename $(NODIR_SRCS))
 FILE_EXISTS = 1
 
-.PHONY:all clean
-
 all:
 	$(foreach t, $(TARGETS), \
 		$(if $(wildcard $(WORKDIR)/bin/$t), \

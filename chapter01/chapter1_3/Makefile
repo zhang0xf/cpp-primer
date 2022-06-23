@@ -6,10 +6,8 @@ LIB_RULE = $(info LIB_COPY $1)
 TEST_RULE = $(info TEST_COPY $1)
 
 all:
-
 move:
+clean:
 
 test:
 	$(foreach L, $(LIBS), $(if $(call IS_TEST,$L),$(call TEST_RULE, $L),$(call LIB_RULE, $L)) )
-
-clean:
