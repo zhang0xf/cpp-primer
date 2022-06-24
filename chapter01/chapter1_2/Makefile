@@ -14,20 +14,20 @@ MOVE_FILES =
 # 将$(shell [ condition ] && text)整个作为if函数的condition
 # 存在问题:mv文件时,编译尚未完成!解决方法:make move!(是否有更好的解决方案?)
 all:
-	@#echo $(FILE_EXISTS)
 	$(foreach t, $(TARGETS), \
 		$(if $(wildcard $(WORKDIR)/bin/$t), \
-		$(eval FILE_EXISTS=1), \
-		$(if $(wildcard ./$t), $(eval FILE_EXISTS=1), $(eval FILE_EXISTS=0))) )
+		$(), \
+		$(if $(wildcard ./$t), $(eval FILE_EXISTS=1), $(eval FILE_EXISTS=0)) ) )
 
-	@#echo $(FILE_EXISTS)
-	$(if $(shell [ $(FILE_EXISTS) -eq 0 ] && echo true), $(foreach c, $(NODIR_SRCS), $(CC) $c $(CFLAGS) $(LIBFLAGS) -o $(basename $c);) )
+	$(if $(shell [ $(FILE_EXISTS) -eq 0 ] && echo true), \
+		$(foreach c, $(NODIR_SRCS), $(CC) $c $(CFLAGS) $(LIBFLAGS) -o $(basename $c);) )
 
 move:
 	$(foreach t, $(TARGETS), \
 		$(if $(wildcard $(shell pwd)/$t), $(eval MOVE_FILES+=$t)) )
 
-	$(shell mv $(MOVE_FILES) $(WORKDIR)/bin)
+	$(if $(shell [ ! "$(MOVE_FILES)" = "" ] && echo true), \
+		$(shell mv $(MOVE_FILES) $(WORKDIR)/bin) )
 
 # 另一种风格for,缺点:在for中不能使用函数.
 clean:
