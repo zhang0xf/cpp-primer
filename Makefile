@@ -1,52 +1,40 @@
-# 设置变量: export声明环境变量,使子目录Makefile可以使用该变量
+# 编译器
 CC = g++
-export WORKDIR = $(shell pwd)
-SUBDIRS = $(shell find $(WORKDIR) -maxdepth 5 -type d | grep 'chapter[0~9]')
-export CFLAGS = -Wall -Wextra -Werror -g
-export LIBFLAGS = -lstdc++
 
-#.PHONY指定伪目标,Makefile默认目标是一个文件
-.PHONY:all move clean
+# export声明环境变量
+export WORKDIR = $(shell pwd)
+export CFLAGS = -Wall -Wextra -Werror -g
+export LIBS = -lstdc++
+
+# 子目录
+CHAPTER_01 = $(shell find $(WORKDIR)  -mindepth 1 -maxdepth 1 -type d | grep 'chapter01')
+CHAPTER_02 = $(shell find $(WORKDIR)  -mindepth 1 -maxdepth 1 -type d | grep 'chapter02')
+CHAPTER_03 = $(shell find $(WORKDIR)  -mindepth 1 -maxdepth 1 -type d | grep 'chapter03')
+
+# 伪目标
+.PHONY:clean
 
 all:
-	@echo "make start"
-
-	@# 注释:如果目录中存在Makefile文件,才执行make -C
-	@for dir in $(SUBDIRS); do \
-		if [ -e $$dir/Makefile ]; then \
-			make -C $$dir all; \
-		fi \
-	done
-	
-	@echo "make end"
-
-move:
-	@echo "make move start"
-
-	@# 注释:创建bin目录
+	@#创建bin目录
 	@if [ ! -d $(WORKDIR)/bin ]; then \
 		mkdir bin; \
 	fi
 
-	@# 注释:如果目录中存在Makefile文件,才执行make -C
-	@for dir in $(SUBDIRS); do \
-		if [ -e $$dir/Makefile ]; then \
-			make -C $$dir move; \
-		fi \
-	done
+	@echo "make"
 
-	@echo "make move end"
+	make -C $(CHAPTER_01) all;
+	make -C $(CHAPTER_02) all;
+	make -C $(CHAPTER_03) all;
+	
+	@echo "make end."
 
 clean:
-	@echo "make clean start"
+	@echo "make clean"
 	
-	@# 注释:如果目录中存在Makefile文件,才执行make -C
-	@for dir in $(SUBDIRS); do \
-		if [ -e $$dir/Makefile ]; then \
-			make -C $$dir clean; \
-		fi \
-	done
-	
+	make -C $(CHAPTER_01) clean;
+	make -C $(CHAPTER_02) clean;
+	make -C $(CHAPTER_03) clean;
+
 	@rm $(WORKDIR)/bin/* -rf
 	
 	@echo "make clean end"

@@ -1,3 +1,4 @@
+# 设置变量
 CUR_DIRS = $(shell pwd)
 SRCS = $(wildcard *.cpp)
 NODIR_SRCS = $(notdir $(SRCS))
