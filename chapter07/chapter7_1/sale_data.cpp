@@ -3,9 +3,14 @@
 using std::istream;
 using std::ostream;
 
+// 类外定义构造函数
+Sales_Data::Sales_Data(std::istream &is)
+{
+    read(is, *this); // 从is中读取一条交易信息,然后存入this对象中
+}
+
 // 类外定义成员函数
-double
-Sales_Data::avg_price() const // 作用域运算符::,表明avg_price()函数位于Sales_Data类的作用域内,即可以使用units_solds和revenue
+double Sales_Data::avg_price() const // 作用域运算符::,表明avg_price()函数位于Sales_Data类的作用域内,即可以使用units_solds和revenue
 {
     if (units_solds)
     {
