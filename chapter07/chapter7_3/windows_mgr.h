@@ -10,6 +10,7 @@ public:
     // 窗口中每个屏幕的编号
     using ScreenIndex = std::vector<Screen>::size_type;
     void clear(ScreenIndex);
+    ScreenIndex addScreen(const Screen &);
 
 private:
     // 这个Window_mgr追踪的Screen
