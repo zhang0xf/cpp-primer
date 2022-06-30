@@ -22,8 +22,12 @@ int main(int argc, char *argv[])
     }
 
     std::ofstream output;
-    output.open(fileName + ".copy"); // 打开输出文件
-    if (!output)                     // 检查是否打开成功
+    output.open(fileName + ".copy"); // 模式:(隐含输出和截断)
+    // output.open(fileName + ".copy", std::ofstream::out);                       // 模式:输出(隐含截断文件)
+    // output.open(fileName + ".copy", std::ofstream::out | std::ostream::trunc); // 模式:输出和截断
+    // output.open(fileName + ".copy", std::ofstream::app);                       // 模式:追加(隐含输出文件)
+    // output.open(fileName + ".copy", std::ofstream::out | std::ofstream::app);  // 模式:输出和追加
+    if (!output) // 检查是否打开成功
     {
         std::cout << "open file : " << fileName << ".copy"
                   << " fail!" << std::endl;
