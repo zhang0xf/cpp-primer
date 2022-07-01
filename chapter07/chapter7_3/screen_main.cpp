@@ -10,7 +10,7 @@ int main()
     screen.set('$').display(std::cout); // 调用非常量版本
     blank.display(std::cout);           // 调用常量版本
 
-    const Screen c_screen;
+    const Screen c_screen(5, 3, ' ');
     c_screen.display(std::cout);
     return 0;
 }
