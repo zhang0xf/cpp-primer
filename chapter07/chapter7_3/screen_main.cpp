@@ -9,5 +9,8 @@ int main()
     screen.display(std::cout).set('#');
     screen.set('$').display(std::cout); // 调用非常量版本
     blank.display(std::cout);           // 调用常量版本
+
+    const Screen c_screen;
+    c_screen.display(std::cout);
     return 0;
 }
