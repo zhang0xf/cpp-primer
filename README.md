@@ -11,5 +11,4 @@ C++ primer
 # build
 
 * `make`
-* `make move`
 * `make clean`
