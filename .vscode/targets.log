@@ -5,14 +5,14 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Tue Jul  5 18:09:07 2022
+# Make data base, printed on Tue Jul  5 22:29:48 2022
 
 # Variables
 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
- 
 # automatic
 ?F = $(notdir $?)
 # environment
@@ -95,6 +95,8 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 LOGNAME = root
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# makefile (from 'Makefile', line 20)
+CHAPTER_12 = $(shell find $(WORKDIR)  -mindepth 1 -maxdepth 1 -type d | grep 'chapter12')
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -172,7 +174,7 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
 WSL_DISTRO_NAME = Ubuntu-18.04
 # variable set hash-table stats:
-# Load=80/1024=8%, Rehash=0, Collisions=5/192=3%
+# Load=81/1024=8%, Rehash=0, Collisions=5/201=2%
 
 # Pattern-specific Variable Values
 
@@ -180,9 +182,9 @@ WSL_DISTRO_NAME = Ubuntu-18.04
 
 # Directories
 
-# . (device 2064, inode 114692): 20 files, no impossibilities.
+# . (device 2064, inode 114692): 21 files, no impossibilities.
 
-# 20 files, no impossibilities in 1 directories.
+# 21 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -214,8 +216,8 @@ all:
 # automatic
 # ? := 
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=4/95=4%
-#  recipe to execute (from 'Makefile', line 25):
+# Load=8/32=25%, Rehash=0, Collisions=5/103=5%
+#  recipe to execute (from 'Makefile', line 26):
 	@#创建bin目录
 	@if [ ! -d $(WORKDIR)/bin ]; then \
 		mkdir bin; \
@@ -231,6 +233,7 @@ all:
 	make -C $(CHAPTER_09) all;
 	make -C $(CHAPTER_10) all;
 	make -C $(CHAPTER_11) all;
+	make -C $(CHAPTER_12) all;
 	
 	@echo "make end."
 
@@ -248,7 +251,7 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-04 12:40:45.1585844
+#  Last modified 2022-07-05 22:28:22.2332825
 #  File has been updated.
 #  Successfully updated.
 
@@ -263,7 +266,7 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 46):
+#  recipe to execute (from 'Makefile', line 48):
 	@echo "make clean"
 	
 	make -C $(CHAPTER_01) clean;
@@ -276,6 +279,7 @@ clean:
 	make -C $(CHAPTER_09) clean;
 	make -C $(CHAPTER_10) clean;
 	make -C $(CHAPTER_11) clean;
+	make -C $(CHAPTER_12) clean;
 	@rm $(WORKDIR)/bin/* -rf
 	
 	@echo "make clean end"
@@ -288,12 +292,13 @@ clean:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 27 / storage = 233 B / avg = 8 B
-# current buf: size = 8162 B / used = 233 B / count = 27 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 28 / storage = 243 B / avg = 8 B
+# current buf: size = 8162 B / used = 243 B / count = 28 / avg = 8 B
 
-# strcache performance: lookups = 37 / hit rate = 27%
+# strcache performance: lookups = 38 / hit rate = 26%
 # hash-table stats:
-# Load=27/8192=0%, Rehash=0, Collisions=1/37=3%
-# Finished Make data base on Tue Jul  5 18:09:07 2022
+# Load=28/8192=0%, Rehash=0, Collisions=1/38=3%
+ 
+# Finished Make data base on Tue Jul  5 22:29:48 2022
 
  
