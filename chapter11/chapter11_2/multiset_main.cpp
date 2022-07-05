@@ -1,6 +1,6 @@
 #include <set>
 
-#include "./sale_items.h"
+#include "../sale_items.h"
 
 bool compare_isbn(const Sales_item &lhs, const Sales_item &rhs)
 {

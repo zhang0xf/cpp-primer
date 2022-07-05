@@ -6,12 +6,13 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jul  5 16:27:52 2022
+# Make data base, printed on Tue Jul  5 18:09:07 2022
 
 # Variables
 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
+ 
 # automatic
 ?F = $(notdir $?)
 # environment
@@ -275,7 +276,6 @@ clean:
 	make -C $(CHAPTER_09) clean;
 	make -C $(CHAPTER_10) clean;
 	make -C $(CHAPTER_11) clean;
- 
 	@rm $(WORKDIR)/bin/* -rf
 	
 	@echo "make clean end"
@@ -294,6 +294,6 @@ clean:
 # strcache performance: lookups = 37 / hit rate = 27%
 # hash-table stats:
 # Load=27/8192=0%, Rehash=0, Collisions=1/37=3%
-# Finished Make data base on Tue Jul  5 16:27:52 2022
+# Finished Make data base on Tue Jul  5 18:09:07 2022
 
  
