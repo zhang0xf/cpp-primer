@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jul  6 14:01:20 2022
+# Make data base, printed on Thu Jul  7 16:37:09 2022
 
 # Variables
 
@@ -81,7 +81,7 @@ PWD = /home/zhangfei/cpp/cpp-primer
 # makefile (from 'Makefile', line 11)
 CHAPTER_02 = $(shell find $(WORKDIR)  -mindepth 1 -maxdepth 1 -type d | grep 'chapter02')
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-3fd27f29-fa52-4709-91c8-44901c20dc0a.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-0e09f40d-e4ec-477d-8d3d-b4125f757f3c.sock
 # environment
 WSL_INTEROP = /run/WSL/12_interop
 # environment
@@ -276,12 +276,12 @@ clean:
 	make -C $(CHAPTER_07) clean;
 	make -C $(CHAPTER_08) clean;
 	make -C $(CHAPTER_09) clean;
- 
 	make -C $(CHAPTER_10) clean;
 	make -C $(CHAPTER_11) clean;
 	make -C $(CHAPTER_12) clean;
 	@rm $(WORKDIR)/bin/* -rf
 	
+ 
 	@echo "make clean end"
 
 # files hash-table stats:
@@ -298,6 +298,6 @@ clean:
 # strcache performance: lookups = 38 / hit rate = 26%
 # hash-table stats:
 # Load=28/8192=0%, Rehash=0, Collisions=1/38=3%
-# Finished Make data base on Wed Jul  6 14:01:20 2022
+# Finished Make data base on Thu Jul  7 16:37:09 2022
 
  
