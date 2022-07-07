@@ -1,0 +1,10 @@
+A* doesn’t see anything else. It only sees the graph. 
+It doesn’t know whether something is indoors or outdoors, or if it’s a room or a doorway, or how big an area is. 
+It only sees the graph! It doesn’t know the difference between this map and this other one.
+Output: The path found by A* is made of graph nodes and edges. 
+The edges are abstract mathematical concepts. 
+A* will tell you to move from one location to another but it won’t tell you how. 
+Remember that it doesn’t know anything about rooms or doors; all it sees is the graph. 
+You’ll have to decide whether a graph edge returned by A* means moving from tile to tile or walking in a straight line or opening a door or swimming or running along a curved path.
+Tradeoffs: For any given game map, there are many different ways of making a pathfinding graph to give to A*. 
+The above map makes most doorways into nodes; what if we made doorways into edges? What if we used a pathfinding grid?
