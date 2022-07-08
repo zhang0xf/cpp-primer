@@ -6,7 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jul  7 21:19:39 2022
+# Make data base, printed on Fri Jul  8 23:20:35 2022
+ 
 
 # Variables
 
@@ -15,11 +16,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # automatic
 ?F = $(notdir $?)
 # environment
-WSLENV = VSCODE_WSL_EXT_LOCATION/up
+WSLENV = VSCODE_WSL_EXT_LOCATION/up:VSCODE_SERVER_TAR/up
 # default
 .SHELLFLAGS := -c
-# environment
-VSCODE_LOG_NATIVE = false
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -31,9 +30,9 @@ CURDIR := /home/zhangfei/cpp/cpp-primer
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"bbca1a7059cee8a1b93da8947fee1c4f.zh-cn","_translationsConfigFile":"/root/.vscode-server/data/clp/bbca1a7059cee8a1b93da8947fee1c4f.zh-cn/tcf.json","_cacheRoot":"/root/.vscode-server/data/clp/bbca1a7059cee8a1b93da8947fee1c4f.zh-cn","_resolvedLanguagePackCoreLocation":"/root/.vscode-server/data/clp/bbca1a7059cee8a1b93da8947fee1c4f.zh-cn/30d9c6cd9483b2cc586687151bcbcd635f373630","_corruptedFile":"/root/.vscode-server/data/clp/bbca1a7059cee8a1b93da8947fee1c4f.zh-cn/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"bbca1a7059cee8a1b93da8947fee1c4f.zh-cn","_translationsConfigFile":"/root/.vscode-server/data/clp/bbca1a7059cee8a1b93da8947fee1c4f.zh-cn/tcf.json","_cacheRoot":"/root/.vscode-server/data/clp/bbca1a7059cee8a1b93da8947fee1c4f.zh-cn","_resolvedLanguagePackCoreLocation":"/root/.vscode-server/data/clp/bbca1a7059cee8a1b93da8947fee1c4f.zh-cn/92d25e35d9bf1a6b16f7d0758f25d48ace11e5b9","_corruptedFile":"/root/.vscode-server/data/clp/bbca1a7059cee8a1b93da8947fee1c4f.zh-cn/corrupted.info","_languagePackSupport":true}
 # environment
-_ = /root/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/node
+_ = /root/.vscode-server/bin/92d25e35d9bf1a6b16f7d0758f25d48ace11e5b9/node
 # makefile (from 'Makefile', line 6)
 CFLAGS = -Wall -Wextra -Werror -g
 # makefile (from 'Makefile', line 1)
@@ -43,15 +42,13 @@ GNUMAKEFLAGS :=
 # environment
 XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 VSCODE_CWD = /mnt/c/Users/zhangfei/AppData/Local/Programs/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /root/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git LFS:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/TortoiseSVN/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/Users/zhangfei/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/zhangfei/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/usr/local/go/bin
+PATH = /root/.vscode-server/bin/92d25e35d9bf1a6b16f7d0758f25d48ace11e5b9/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git LFS:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/TortoiseSVN/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/Users/zhangfei/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/zhangfei/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/usr/local/go/bin
 # makefile (from 'Makefile', line 14)
 CHAPTER_06 = $(shell find $(WORKDIR)  -mindepth 1 -maxdepth 1 -type d | grep 'chapter06')
 # makefile (from 'Makefile', line 15)
@@ -63,7 +60,9 @@ CHAPTER_09 = $(shell find $(WORKDIR)  -mindepth 1 -maxdepth 1 -type d | grep 'ch
 # makefile (from 'Makefile', line 10)
 CHAPTER_01 = $(shell find $(WORKDIR)  -mindepth 1 -maxdepth 1 -type d | grep 'chapter01')
 # environment
-VSCODE_LOG_STACK = false
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_SERVER_TAR = /mnt/c/Users/zhangfei/AppData/Local/Temp/vscode-remote-wsl/92d25e35d9bf1a6b16f7d0758f25d48ace11e5b9/vscode-server-stable-linux-x64.tar.gz
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -72,8 +71,6 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 CHAPTER_10 = $(shell find $(WORKDIR)  -mindepth 1 -maxdepth 1 -type d | grep 'chapter10')
 # automatic
 %F = $(notdir $%)
-# environment
-VSCODE_PIPE_LOGGING = true
 # makefile (from 'Makefile', line 19)
 CHAPTER_11 = $(shell find $(WORKDIR)  -mindepth 1 -maxdepth 1 -type d | grep 'chapter11')
 # environment
@@ -81,9 +78,9 @@ PWD = /home/zhangfei/cpp/cpp-primer
 # makefile (from 'Makefile', line 11)
 CHAPTER_02 = $(shell find $(WORKDIR)  -mindepth 1 -maxdepth 1 -type d | grep 'chapter02')
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-fd3ae85e-3bfa-44a0-80a1-7c51f0685b25.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-920b238f-4255-42b9-9385-1662e5909ffb.sock
 # environment
-WSL_INTEROP = /run/WSL/11653_interop
+WSL_INTEROP = /run/WSL/423_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -93,7 +90,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 LOGNAME = root
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # makefile (from 'Makefile', line 20)
 CHAPTER_12 = $(shell find $(WORKDIR)  -mindepth 1 -maxdepth 1 -type d | grep 'chapter12')
 # environment
@@ -132,6 +129,8 @@ MAKE_COMMAND := make
 *F = $(notdir $*)
 # makefile
 MAKEFLAGS = pqrR
+# makefile (from 'Makefile', line 21)
+CHAPTER_13 = $(shell find $(WORKDIR)  -mindepth 1 -maxdepth 1 -type d | grep 'chapter13')
 # environment
 MFLAGS = -pqrR
 # automatic
@@ -169,11 +168,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_EXTHOST_WILL_SEND_SOCKET = true
-# environment
 WSL_DISTRO_NAME = Ubuntu-18.04
 # variable set hash-table stats:
-# Load=81/1024=8%, Rehash=0, Collisions=5/201=2%
+# Load=79/1024=8%, Rehash=0, Collisions=5/207=2%
 
 # Pattern-specific Variable Values
 
@@ -181,9 +178,9 @@ WSL_DISTRO_NAME = Ubuntu-18.04
 
 # Directories
 
-# . (device 2064, inode 114692): 21 files, no impossibilities.
+# . (device 2064, inode 114692): 22 files, no impossibilities.
 
-# 21 files, no impossibilities in 1 directories.
+# 22 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -215,8 +212,8 @@ all:
 # automatic
 # ? := 
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=5/103=5%
-#  recipe to execute (from 'Makefile', line 26):
+# Load=8/32=25%, Rehash=0, Collisions=8/111=7%
+#  recipe to execute (from 'Makefile', line 27):
 	@#创建bin目录
 	@if [ ! -d $(WORKDIR)/bin ]; then \
 		mkdir bin; \
@@ -233,6 +230,7 @@ all:
 	make -C $(CHAPTER_10) all;
 	make -C $(CHAPTER_11) all;
 	make -C $(CHAPTER_12) all;
+	make -C $(CHAPTER_13) all;
 	
 	@echo "make end."
 
@@ -250,7 +248,7 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-05 22:28:22.2332825
+#  Last modified 2022-07-08 23:20:23.8249214
 #  File has been updated.
 #  Successfully updated.
 
@@ -265,7 +263,7 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 48):
+#  recipe to execute (from 'Makefile', line 50):
 	@echo "make clean"
 	
 	make -C $(CHAPTER_01) clean;
@@ -279,25 +277,26 @@ clean:
 	make -C $(CHAPTER_10) clean;
 	make -C $(CHAPTER_11) clean;
 	make -C $(CHAPTER_12) clean;
+	make -C $(CHAPTER_13) clean;
 	@rm $(WORKDIR)/bin/* -rf
 	
 	@echo "make clean end"
- 
 
 # files hash-table stats:
 # Load=6/1024=1%, Rehash=0, Collisions=0/20=0%
 # VPATH Search Paths
 
+ 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 28 / storage = 243 B / avg = 8 B
-# current buf: size = 8162 B / used = 243 B / count = 28 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 29 / storage = 253 B / avg = 8 B
+# current buf: size = 8162 B / used = 253 B / count = 29 / avg = 8 B
 
-# strcache performance: lookups = 38 / hit rate = 26%
+# strcache performance: lookups = 39 / hit rate = 25%
 # hash-table stats:
-# Load=28/8192=0%, Rehash=0, Collisions=1/38=3%
-# Finished Make data base on Thu Jul  7 21:19:39 2022
+# Load=29/8192=0%, Rehash=0, Collisions=1/39=3%
+# Finished Make data base on Fri Jul  8 23:20:35 2022
 
  

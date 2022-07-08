@@ -18,6 +18,7 @@ CHAPTER_09 = $(shell find $(WORKDIR)  -mindepth 1 -maxdepth 1 -type d | grep 'ch
 CHAPTER_10 = $(shell find $(WORKDIR)  -mindepth 1 -maxdepth 1 -type d | grep 'chapter10')
 CHAPTER_11 = $(shell find $(WORKDIR)  -mindepth 1 -maxdepth 1 -type d | grep 'chapter11')
 CHAPTER_12 = $(shell find $(WORKDIR)  -mindepth 1 -maxdepth 1 -type d | grep 'chapter12')
+CHAPTER_13 = $(shell find $(WORKDIR)  -mindepth 1 -maxdepth 1 -type d | grep 'chapter13')
 
 # 伪目标
 .PHONY:clean
@@ -41,6 +42,7 @@ all:
 	make -C $(CHAPTER_10) all;
 	make -C $(CHAPTER_11) all;
 	make -C $(CHAPTER_12) all;
+	make -C $(CHAPTER_13) all;
 	
 	@echo "make end."
 
@@ -58,6 +60,7 @@ clean:
 	make -C $(CHAPTER_10) clean;
 	make -C $(CHAPTER_11) clean;
 	make -C $(CHAPTER_12) clean;
+	make -C $(CHAPTER_13) clean;
 
 	@rm $(WORKDIR)/bin/* -rf
 	

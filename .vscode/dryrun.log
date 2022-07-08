@@ -1,4 +1,4 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory '/home/zhangfei/cpp/cpp-primer'
  
 #创建bin目录
@@ -6,6 +6,7 @@ if [ ! -d /home/zhangfei/cpp/cpp-primer/bin ]; then \
 	mkdir bin; \
 fi
 echo "make"
+ 
 make -C /home/zhangfei/cpp/cpp-primer/chapter01 all;
 make -C /home/zhangfei/cpp/cpp-primer/chapter02 all;
 make -C /home/zhangfei/cpp/cpp-primer/chapter03 all;
@@ -17,6 +18,7 @@ make -C /home/zhangfei/cpp/cpp-primer/chapter09 all;
 make -C /home/zhangfei/cpp/cpp-primer/chapter10 all;
 make -C /home/zhangfei/cpp/cpp-primer/chapter11 all;
 make -C /home/zhangfei/cpp/cpp-primer/chapter12 all;
+make -C /home/zhangfei/cpp/cpp-primer/chapter13 all;
 echo "make end."
 make: Leaving directory '/home/zhangfei/cpp/cpp-primer'
  
