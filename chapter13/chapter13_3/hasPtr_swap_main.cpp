@@ -13,5 +13,8 @@ int main()
     p.print();
     p2.print();
 
+    HasPtr p3 = p;
+    p3.print();
+
     return 0;
 }

@@ -15,7 +15,8 @@ class HasPtr
 public:
     HasPtr(const std::string &s = std::string()) : p(new std::string(s)), i(0) {}
     HasPtr(const HasPtr &po) : p(new std::string(*po.p)), i(po.i) {}
-    HasPtr &operator=(const HasPtr &);
+    HasPtr &operator=(const HasPtr &); // 拷贝赋值
+    HasPtr &operator=(HasPtr);         // 拷贝交换(对拷贝复制操作的另一种实现)
     ~HasPtr() { delete p; }
 
     void print();
@@ -25,8 +26,6 @@ private:
     int i;
 };
 
-#endif
-
 // 编写自定义的swap函数
 inline void swap(HasPtr &lhs, HasPtr &rhs)
 {
@@ -34,3 +33,5 @@ inline void swap(HasPtr &lhs, HasPtr &rhs)
     swap(lhs.p, rhs.p); // 只交换指针,避免string的多次拷贝
     swap(lhs.i, rhs.i);
 }
+
+#endif
