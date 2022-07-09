@@ -5,8 +5,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Sat Jul  9 10:08:27 2022
+# Make data base, printed on Sat Jul  9 10:51:44 2022
 
 # Variables
 
@@ -278,7 +279,6 @@ clean:
 	@rm $(WORKDIR)/bin/* -rf
 	
 	@echo "make clean end"
- 
 
 # files hash-table stats:
 # Load=6/1024=1%, Rehash=0, Collisions=0/20=0%
@@ -294,6 +294,6 @@ clean:
 # strcache performance: lookups = 39 / hit rate = 25%
 # hash-table stats:
 # Load=29/8192=0%, Rehash=0, Collisions=1/39=3%
-# Finished Make data base on Sat Jul  9 10:08:27 2022
+# Finished Make data base on Sat Jul  9 10:51:44 2022
 
  
