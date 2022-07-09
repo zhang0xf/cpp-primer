@@ -8,7 +8,7 @@
             "name": "(gdb) 启动",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/bin/allocator_main",
+            "program": "${workspaceRoot}/bin/message_main",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
