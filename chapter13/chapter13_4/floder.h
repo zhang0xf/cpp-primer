@@ -5,6 +5,8 @@
 
 #include "./message.h"
 
+// Floder类未完成,目前仅根据message做出反应,没有主动操作message的动作
+
 class Floder
 {
 public:
