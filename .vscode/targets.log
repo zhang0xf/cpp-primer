@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Sat Jul  9 21:32:25 2022
+# Make data base, printed on Sat Jul  9 22:22:02 2022
 
 # Variables
 
@@ -76,7 +76,7 @@ PWD = /home/zhangfei/cpp/cpp-primer
 # makefile (from 'Makefile', line 11)
 CHAPTER_02 = $(shell find $(WORKDIR)  -mindepth 1 -maxdepth 1 -type d | grep 'chapter02')
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-e984c42b-6940-4b55-af7b-65c2b716b589.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-f065ce64-8580-4f84-9308-750467750575.sock
 # environment
 WSL_INTEROP = /run/WSL/12_interop
 # environment
@@ -281,6 +281,7 @@ clean:
 	@echo "make clean end"
 
 # files hash-table stats:
+ 
 # Load=6/1024=1%, Rehash=0, Collisions=0/20=0%
 # VPATH Search Paths
 
@@ -294,6 +295,6 @@ clean:
 # strcache performance: lookups = 39 / hit rate = 25%
 # hash-table stats:
 # Load=29/8192=0%, Rehash=0, Collisions=1/39=3%
-# Finished Make data base on Sat Jul  9 21:32:25 2022
+# Finished Make data base on Sat Jul  9 22:22:02 2022
 
  

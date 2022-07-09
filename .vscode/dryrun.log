@@ -6,12 +6,12 @@ if [ ! -d /home/zhangfei/cpp/cpp-primer/bin ]; then \
 	mkdir bin; \
 fi
 echo "make"
+ 
 # make -C /home/zhangfei/cpp/cpp-primer/chapter01 all;
 # make -C /home/zhangfei/cpp/cpp-primer/chapter02 all;
 # make -C /home/zhangfei/cpp/cpp-primer/chapter03 all;
 # make -C /home/zhangfei/cpp/cpp-primer/chapter05 all;
 # make -C /home/zhangfei/cpp/cpp-primer/chapter06 all;
- 
 # make -C /home/zhangfei/cpp/cpp-primer/chapter07 all;
 # make -C /home/zhangfei/cpp/cpp-primer/chapter08 all;
 # make -C /home/zhangfei/cpp/cpp-primer/chapter09 all;
