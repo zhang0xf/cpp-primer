@@ -4,7 +4,7 @@ CC = g++
 # export声明环境变量
 export WORKDIR = $(shell pwd)
 export CFLAGS = -Wall -Wextra -Werror -g
-export LIBS = -lstdc++
+export LIBS = -lstdc++ -std=c++14
 
 # 子目录
 CHAPTER_01 = $(shell find $(WORKDIR)  -mindepth 1 -maxdepth 1 -type d | grep 'chapter01')
@@ -31,17 +31,17 @@ all:
 
 	@echo "make"
 
-	# make -C $(CHAPTER_01) all;
-	# make -C $(CHAPTER_02) all;
-	# make -C $(CHAPTER_03) all;
-	# make -C $(CHAPTER_05) all;
-	# make -C $(CHAPTER_06) all;
-	# make -C $(CHAPTER_07) all;
-	# make -C $(CHAPTER_08) all;
-	# make -C $(CHAPTER_09) all;
-	# make -C $(CHAPTER_10) all;
-	# make -C $(CHAPTER_11) all;
-	# make -C $(CHAPTER_12) all;
+	make -C $(CHAPTER_01) all;
+	make -C $(CHAPTER_02) all;
+	make -C $(CHAPTER_03) all;
+	make -C $(CHAPTER_05) all;
+	make -C $(CHAPTER_06) all;
+	make -C $(CHAPTER_07) all;
+	make -C $(CHAPTER_08) all;
+	make -C $(CHAPTER_09) all;
+	make -C $(CHAPTER_10) all;
+	make -C $(CHAPTER_11) all;
+	make -C $(CHAPTER_12) all;
 	make -C $(CHAPTER_13) all;
 	
 	@echo "make end."
@@ -62,6 +62,6 @@ clean:
 	make -C $(CHAPTER_12) clean;
 	make -C $(CHAPTER_13) clean;
 
-	@rm $(WORKDIR)/bin/* -rf
+	@rm -r $(WORKDIR)/bin/*
 	
 	@echo "make clean end"
