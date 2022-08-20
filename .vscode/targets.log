@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Tue Aug  2 11:08:19 2022
+# Make data base, printed on Thu Aug 18 00:48:34 2022
 
 # Variables
 
@@ -25,16 +25,16 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # makefile
 CURDIR := /Users/zhangfei/code/cpp-primer/cpp-primer
 # makefile
- 
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"1d735750dbb1b9066c7513078396ba0f.zh-cn","_translationsConfigFile":"/Users/zhangfei/Library/Application Support/Code/clp/1d735750dbb1b9066c7513078396ba0f.zh-cn/tcf.json","_cacheRoot":"/Users/zhangfei/Library/Application Support/Code/clp/1d735750dbb1b9066c7513078396ba0f.zh-cn","_resolvedLanguagePackCoreLocation":"/Users/zhangfei/Library/Application Support/Code/clp/1d735750dbb1b9066c7513078396ba0f.zh-cn/3b889b090b5ad5793f524b5d1d39fda662b96a2a","_corruptedFile":"/Users/zhangfei/Library/Application Support/Code/clp/1d735750dbb1b9066c7513078396ba0f.zh-cn/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"08bdb29c43b4c03defdaaecc51ad48b6.zh-cn","_translationsConfigFile":"/Users/zhangfei/Library/Application Support/Code/clp/08bdb29c43b4c03defdaaecc51ad48b6.zh-cn/tcf.json","_cacheRoot":"/Users/zhangfei/Library/Application Support/Code/clp/08bdb29c43b4c03defdaaecc51ad48b6.zh-cn","_resolvedLanguagePackCoreLocation":"/Users/zhangfei/Library/Application Support/Code/clp/08bdb29c43b4c03defdaaecc51ad48b6.zh-cn/6d9b74a70ca9c7733b29f0456fd8195364076dda","_corruptedFile":"/Users/zhangfei/Library/Application Support/Code/clp/08bdb29c43b4c03defdaaecc51ad48b6.zh-cn/corrupted.info","_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 6)
 CFLAGS = -Wall -Wextra -Werror -g
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
+ 
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
@@ -58,7 +58,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.zZJ1unOlWc/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.Q85NPMwp06/Listeners
 # makefile (from `Makefile', line 18)
 CHAPTER_10 = $(shell find $(WORKDIR)  -mindepth 1 -maxdepth 1 -type d | grep 'chapter10')
 # automatic
@@ -82,7 +82,7 @@ HOME = /Users/zhangfei
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/zhangfei/Library/Application Support/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
+VSCODE_CODE_CACHE_PATH = /Users/zhangfei/Library/Application Support/Code/CachedData/6d9b74a70ca9c7733b29f0456fd8195364076dda
 # environment
 LOGNAME = zhangfei
 # environment
@@ -122,7 +122,7 @@ TMPDIR = /var/folders/w9/zfp31c1d2n9gfxb4m2lnx1d40000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/zhangfei/Library/Application Support/Code/1.69.2-main.sock
+VSCODE_IPC_HOOK = /Users/zhangfei/Library/Application Support/Code/1.70.1-main.sock
 # environment
 MallocNanoZone = 0
 # makefile
@@ -134,7 +134,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.2977162.2977168
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.5157018.5157024
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
@@ -170,7 +170,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 982
+VSCODE_PID = 7583
 # variable set hash-table stats:
 # Load=79/1024=8%, Rehash=0, Collisions=3/180=2%
 
@@ -180,7 +180,7 @@ VSCODE_PID = 982
 
 # Directories
 
-# . (device 16777233, inode 2069437): 23 files, no impossibilities.
+# . (device 16777234, inode 2069437): 23 files, no impossibilities.
 
 # 23 files, no impossibilities in 1 directories.
 
@@ -296,9 +296,8 @@ clean:
 # # of strings in strcache: 1
 # # of strcache buffers: 1
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
- 
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Tue Aug  2 11:08:19 2022
+# Finished Make data base on Thu Aug 18 00:48:34 2022
 
  
