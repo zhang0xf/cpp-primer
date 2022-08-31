@@ -60,24 +60,37 @@ void StrVec::check_n_alloc() {
 
 // 避免string的拷贝(对于reallocate场景,拷贝之后string的用户还是原来那一个)
 // string的移动构造函数
+// void StrVec::reallocate() {
+//     // 我们将分配当前大小2倍的内存空间
+//     auto newcapacity = size() ? 2 * size() : 1;
+//     // 分配新内存
+//     auto newdata = alloc.allocate(newcapacity);
+//     // 将数据从旧内存移动到新内存
+//     auto dest = newdata;  // 指向数组中下一个空闲位置
+//     auto elem = elements; // 指向旧数组中下一个元素
+//     for (size_t i = 0; i != size(); ++i) {
+//         alloc.construct(dest++, std::move(*elem++));
+//     }
+//     // 一旦我们移动完所有元素,就释放旧内存空间
+//     free();
+//     // 更新我们的数据结构,执行新元素
+//     elements = newdata;
+//     first_free = dest;
+//     cap = elements + newcapacity;
+// }
+
+// 使用移动迭代器(上文过程等价方法)
 void StrVec::reallocate() {
-    // 我们将分配当前大小2倍的内存空间
     auto newcapacity = size() ? 2 * size() : 1;
-    // 分配新内存
-    auto newdata = alloc.allocate(newcapacity);
-    // 将数据从旧内存移动到新内存
-    auto dest = newdata;  // 指向数组中下一个空闲位置
-    auto elem = elements; // 指向旧数组中下一个元素
-    for (size_t i = 0; i != size(); ++i) {
-        // std::move(*elem++) = nullptr;
-        std::cout << std::move(*elem++);
-        alloc.construct(dest++, std::move(*elem++));
-    }
-    // 一旦我们移动完所有元素,就释放旧内存空间
+    auto first = alloc.allocate(newcapacity);
+    // 移动元素
+    auto last = std::uninitialized_copy(std::make_move_iterator(begin()), std::make_move_iterator(end()), first);
+    // 释放旧空间
     free();
-    // 更新我们的数据结构,执行新元素
-    elements = newdata;
-    first_free = dest;
+
+    // 更新指针
+    elements = first;
+    first_free = last;
     cap = elements + newcapacity;
 }
 
