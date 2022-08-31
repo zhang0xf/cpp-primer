@@ -54,13 +54,23 @@ StrVec &StrVec::operator=(std::initializer_list<std::string> li) {
     return *this;
 }
 
-// 重载运算符
-// bool StrVec::operator!=(StrVec &rhs) const {
-//     if (this->elements == rhs.elements && this->first_free == rhs.first_free && this->cap == rhs.cap) {
-//         return true;
-//     }
-//     return false;
-// }
+// 重载不等运算符
+bool StrVec::operator!=(StrVec &rhs) const {
+    if (this->elements == rhs.elements && this->first_free == rhs.first_free && this->cap == rhs.cap) {
+        return true;
+    }
+    return false;
+}
+
+// 非常量版本下标运算
+std::string &StrVec::operator[](std::size_t n) {
+    return elements[n];
+}
+
+// 常量版本下标运算
+const std::string &StrVec::operator[](std::size_t n) const {
+    return elements[n];
+}
 
 void StrVec::check_n_alloc() {
     if (size() == capacity()) {

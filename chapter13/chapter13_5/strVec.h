@@ -30,7 +30,12 @@ public:
     StrVec &operator=(StrVec &&rhs) noexcept;
 
     // 不等运算符
-    // bool operator!=(StrVec &rhs) const;
+    bool operator!=(StrVec &rhs) const;
+
+    // 下标运算符
+    std::string &operator[](std::size_t n);
+    // 常量版本的下标运算符
+    const std::string &operator[](std::size_t n) const;
 
     // 析构函数
     ~StrVec();
