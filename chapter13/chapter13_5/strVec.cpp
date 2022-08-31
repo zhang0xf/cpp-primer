@@ -110,6 +110,7 @@ void StrVec::push_back(const std::string &str) {
     alloc.construct(first_free, str);
 }
 
+// 实参类型决定了新元素是拷贝还是移动
 void StrVec::push_back(std::string &&str) {
     check_n_alloc();
     alloc.construct(first_free, std::move(str)); // 会使用string的移动构造函数来构造新元素
