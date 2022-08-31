@@ -44,6 +44,16 @@ StrVec &StrVec::operator=(const StrVec &rhs) {
     return *this;
 }
 
+// 重载(支持初始化列表)
+StrVec &StrVec::operator=(std::initializer_list<std::string> li) {
+    // 调用alloc_n_copy分配内存,大小与rhs中元素占用的空间一样多
+    auto data = alloc_n_copy(li.begin(), li.end());
+    free();                // 销毁原内存中的元素,并释放这块内存!
+    elements = data.first; // 更新数据成员,使其指向新空间
+    first_free = cap = data.second;
+    return *this;
+}
+
 // 重载运算符
 // bool StrVec::operator!=(StrVec &rhs) const {
 //     if (this->elements == rhs.elements && this->first_free == rhs.first_free && this->cap == rhs.cap) {

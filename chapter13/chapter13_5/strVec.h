@@ -19,6 +19,8 @@ public:
 
     // 拷贝赋值运算符
     StrVec &operator=(const StrVec &);
+    // 重载拷贝赋值(支持初始化列表)
+    StrVec &operator=(std::initializer_list<std::string>);
 
     // 移动构造函数(避免某些情况下的拷贝)
     // 参数是一个右值引用,使用&&表示右值引用(某个对象的另一个名字),与左值引用有着相反的特性.
