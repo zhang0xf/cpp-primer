@@ -25,6 +25,11 @@ public:
     StrBlobPtr operator++(int); // 后置运算符
     StrBlobPtr operator--(int);
 
+    // 解引用运算符重载
+    std::string &operator*() const;
+    // 箭头运算符要遵循原有的访问元素的含义(p992)
+    std::string *operator->() const;
+
 private:
     // 若检查成功,check返回一个指向vector的shared_ptr
     std::shared_ptr<std::vector<std::string>> check(std::size_t, const std::string &) const;

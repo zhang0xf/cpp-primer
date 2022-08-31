@@ -65,3 +65,13 @@ StrBlobPtr StrBlobPtr::operator--(int) {
     --*this; // 向前移动一个元素,前置++需要检查递增的有效性
     return ret;
 }
+
+// 解引用运算符
+std::string &StrBlobPtr::operator*() const {
+    auto p = check(curr, "dereference past end");
+    return (*p)[curr];
+}
+
+std::string *StrBlobPtr::operator->() const {
+    return &this->operator*();
+}
