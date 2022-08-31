@@ -1,0 +1,6 @@
+{
+    "editor.formatOnSave": true,
+    "clang-format.executable": "/opt/homebrew/bin/clang-format",
+    "clang-format.style": "google",
+    "clang-format.language.cpp.enable": true
+}
