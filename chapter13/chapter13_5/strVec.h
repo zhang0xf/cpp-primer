@@ -35,6 +35,8 @@ public:
 
     // 拷贝元素
     void push_back(const std::string &);
+    // 移动构造重载(右值引用参数)
+    void push_back(std::string &&);
 
     size_t size() const;
     size_t capacity() const;

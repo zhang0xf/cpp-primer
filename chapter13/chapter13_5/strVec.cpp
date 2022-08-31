@@ -110,6 +110,11 @@ void StrVec::push_back(const std::string &str) {
     alloc.construct(first_free, str);
 }
 
+void StrVec::push_back(std::string &&str) {
+    check_n_alloc();
+    alloc.construct(first_free, std::move(str)); // 会使用string的移动构造函数来构造新元素
+}
+
 void StrVec::free() {
     // 不能传递给deallocate一个空指针,如果elements为0,函数什么也不做。
     if (elements) {
