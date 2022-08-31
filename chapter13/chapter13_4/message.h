@@ -6,19 +6,26 @@
 
 class Floder;
 
-class Message
-{
+class Message {
     friend class Floder;
     friend void swap(Message &, Message &);
 
 public:
     //  floders被隐式初始化为空集合
-    explicit Message(const std::string &str = "") : contents(str) {} // contents默认参数空
+    explicit Message(const std::string &str = "") :
+        contents(str) {
+    } // contents默认参数空
 
     // 拷贝控制成员,用来管理指向本message的指针
     Message(const Message &);            // 拷贝构造函数
     Message &operator=(const Message &); // 拷贝赋值操作
     ~Message();                          // 析构函数
+
+    // 移动构造函数
+    Message(Message &&);
+
+    // 移动赋值运算符
+    Message &operator=(Message &&rhs);
 
     // 从给定floder中添加和删除message
     void save(Floder &);
@@ -33,6 +40,8 @@ private:
     void add_to_floders(const Message &);
     // 从floders中的每一个floder删除本message
     void remove_from_floders();
+    // 从本message移动floder指针
+    void move_Floders(Message *msg);
 };
 
 void swap(Message &, Message &);
