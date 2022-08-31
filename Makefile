@@ -42,8 +42,8 @@ all:
 	# make -C $(CHAPTER_09) all;
 	# make -C $(CHAPTER_10) all;
 	# make -C $(CHAPTER_11) all;
-	make -C $(CHAPTER_12) all;
-	make -C $(CHAPTER_13) all;
+	# make -C $(CHAPTER_12) all;
+	# make -C $(CHAPTER_13) all;
 	make -C $(CHAPTER_14) all;
 	
 	@echo "make end."
