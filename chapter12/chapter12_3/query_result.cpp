@@ -2,12 +2,12 @@
 
 QueryResult::QueryResult(std::string s,
                          std::shared_ptr<std::set<line_no>> p,
-                         std::shared_ptr<std::vector<std::string>> f) : sought(s), lines(p), file(f)
-{
+                         std::shared_ptr<std::vector<std::string>> f) :
+    sought(s),
+    lines(p), file(f) {
 }
 
-std::ostream &print(std::ostream &os, const QueryResult &qr)
-{
+std::ostream &print(std::ostream &os, const QueryResult &qr) {
     // 如果找到了单词,打印出现次数和所有出现的位置
     os << qr.sought << " occurs " << qr.lines->size() << " times" << std::endl;
 

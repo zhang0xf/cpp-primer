@@ -12,8 +12,7 @@
 
 class QueryResult;
 
-class TextQuery
-{
+class TextQuery {
     friend QueryResult;
 
 public:

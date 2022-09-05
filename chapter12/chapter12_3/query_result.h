@@ -11,8 +11,7 @@ class QueryResult;
 
 std::ostream &print(std::ostream &, const QueryResult &);
 
-class QueryResult
-{
+class QueryResult {
     friend std::ostream &print(std::ostream &, const QueryResult &);
 
 public:
