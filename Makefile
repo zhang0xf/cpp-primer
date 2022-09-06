@@ -1,5 +1,5 @@
 # 编译器
-CC = g++
+CC = clang++
 
 # export声明环境变量
 export WORKDIR = $(shell pwd)
