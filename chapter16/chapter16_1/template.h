@@ -1,7 +1,8 @@
-#ifndef TEMPLETE_H
-#define TEMPLETE_H
+#ifndef TEMPLATE_H
+#define TEMPLATE_H
 
 #include <algorithm>
+#include <iostream>
 
 template <typename T>
 int compare(const T &v1, const T &v2) {

@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 #include <list>
-#include "templete.h"
+#include "template.h"
 #include "sale_items.h"
 
 int main() {
