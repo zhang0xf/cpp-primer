@@ -1,5 +1,5 @@
 CUR_DIRS = $(shell pwd)
-SUB_DIRS = $(shell find $(CUR_DIRS) -mindepth 1 -maxdepth 2 -type d | grep 'chapter15')
+SUB_DIRS = $(shell find $(CUR_DIRS) -mindepth 1 -maxdepth 2 -type d | grep 'chapter16')
 
 all:
 	@#echo $(SUB_DIRS)
