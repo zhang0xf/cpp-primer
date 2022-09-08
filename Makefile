@@ -34,20 +34,20 @@ all:
 
 	@echo "make"
 
-	# make -C $(CHAPTER_01) all;
-	# make -C $(CHAPTER_02) all;
-	# make -C $(CHAPTER_03) all;
-	# make -C $(CHAPTER_05) all;
-	# make -C $(CHAPTER_06) all;
-	# make -C $(CHAPTER_07) all;
-	# make -C $(CHAPTER_08) all;
-	# make -C $(CHAPTER_09) all;
-	# make -C $(CHAPTER_10) all;
-	# make -C $(CHAPTER_11) all;
-	# make -C $(CHAPTER_12) all;
-	# make -C $(CHAPTER_13) all;
-	# make -C $(CHAPTER_14) all;
-	# make -C $(CHAPTER_15) all;
+	make -C $(CHAPTER_01) all;
+	make -C $(CHAPTER_02) all;
+	make -C $(CHAPTER_03) all;
+	make -C $(CHAPTER_05) all;
+	make -C $(CHAPTER_06) all;
+	make -C $(CHAPTER_07) all;
+	make -C $(CHAPTER_08) all;
+	make -C $(CHAPTER_09) all;
+	make -C $(CHAPTER_10) all;
+	make -C $(CHAPTER_11) all;
+	make -C $(CHAPTER_12) all;
+	make -C $(CHAPTER_13) all;
+	make -C $(CHAPTER_14) all;
+	make -C $(CHAPTER_15) all;
 	make -C $(CHAPTER_16) all;
 	
 	@echo "make end."
